@@ -23,6 +23,21 @@ html, body, #root {
   flex: 1;
 }
 
+.logo-text-gradient {
+  font-size: 2rem;
+  font-weight: 900;
+  display: flex;
+  gap: 0.1rem;
+}
+
+.qc {
+  color: #fdd600; 
+}
+
+.eo {
+  color: #82d4f3; 
+}
+
 /* ==== RESET & GLOBAL ==== */
 * {
   box-sizing: border-box;
