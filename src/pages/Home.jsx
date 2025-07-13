@@ -7,26 +7,26 @@ import "../styles/style.css";
 const productList = [
   {
     id: 1,
-    name: "Coaster",
+    name: "Lót ly",
     desc: "Lót ly terrazzo thủ công",
     price: "$25",
-    category: "Coaster",
+    category: "Lót ly",
     image: "/images/coaster.jpg",
   },
   {
     id: 2,
-    name: "Candle jar",
+    name: "Hũ nến",
     desc: "Hũ nến thơm trang trí",
     price: "$35",
-    category: "Candle jar",
+    category: "Hũ nến",
     image: "/images/candle-jar.jpg",
   },
   {
     id: 3,
-    name: "Vase",
+    name: "Lọ hoa",
     desc: "Lọ cây hoặc hoa decor",
     price: "$40",
-    category: "Vase",
+    category: "Lọ hoa",
     image: "/images/vase.jpg",
   },
 ];
@@ -47,14 +47,14 @@ const Home = () => {
       <section className="welcome">
         <h1>
           Chào mừng bạn đến với <br />
-          <span className="highlight">Ecoverse</span>
+          <span className="highlight">QeCo</span>
         </h1>
       </section>
 
       <section className="categories">
         <h2>PHÂN LOẠI</h2>
         <div className="category-list">
-          {["Coaster", "Candle jar", "Vase"].map((cat) => (
+          {["Lót ly", "Hũ nến", "Lọ hoa"].map((cat) => (
             <CategoryBlock
               key={cat}
               title={cat}
@@ -84,7 +84,7 @@ const Home = () => {
       <section className="about">
         <h2>Về chúng tôi</h2>
         <p>
-          Ecoverse chuyên cung cấp các sản phẩm trang trí thân thiện môi trường.
+          QeCo chuyên cung cấp các sản phẩm trang trí thân thiện môi trường.
         </p>
       </section>
 

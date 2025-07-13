@@ -1,5 +1,26 @@
-h1{
-  text-align: center;
+/* ==== ROOT COLORS (TỪ LOGO) ==== */
+:root {
+  --yellow: #fdd600;
+  --blue: #00a8cc;
+  --hover-blue: #0099b0;
+  --soft-bg: #fdfde8;
+  --light-blue: #b3e5f6;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
 }
 
 /* ==== RESET & GLOBAL ==== */
@@ -17,7 +38,7 @@ body {
 }
 
 a {
-  color: #0039a6;
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -26,19 +47,37 @@ ul {
   padding: 0;
 }
 
+h1 {
+  text-align: center;
+}
+
 /* ==== HEADER ==== */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f9f9f9;
+  background: linear-gradient(to right, var(--light-blue), var(--soft-bg));
   padding: 1rem 2rem;
 }
 
-.logo {
-  font-size: 1.8rem;
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.logo-image {
+  width: 60px;
+  height: auto;
+}
+
+.logo-text {
+  font-size: 0.9rem;
   font-weight: bold;
-  color: #fdd600;
+  text-align: center;
+  color: var(--yellow);
+  margin-top: 0.2rem;
 }
 
 .nav-list {
@@ -54,9 +93,8 @@ ul {
 }
 
 .nav-list li a:hover {
-  color: #0070f3;
+  color: var(--hover-blue);
 }
-
 
 .search-box {
   display: flex;
@@ -89,7 +127,7 @@ ul {
 }
 
 .highlight {
-  color: #fdd600;
+  color: var(--yellow);
   font-style: italic;
   font-weight: bold;
 }
@@ -104,7 +142,8 @@ ul {
 .register-form,
 .login-form,
 .detail-section,
-.faq-section {
+.faq-section,
+.contact-section {
   padding: 2rem;
   max-width: 1200px;
   margin: auto;
@@ -130,21 +169,13 @@ ul {
 }
 
 .category.active {
-  background-color: #fdd600;
+  background-color: var(--yellow);
   border: 2px solid #cfae00;
 }
 
 /* ==== PRODUCT CARD ==== */
-.product,
-.contact-card {
-  background: #f2dc99;
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-}
-
 .product {
-  background: #fdf5d7;
+  background: var(--soft-bg);
   padding: 1rem 0.5rem;
   border-radius: 12px;
   text-align: center;
@@ -176,22 +207,8 @@ ul {
   justify-content: center;
 }
 
-.product-list > .product {
-  max-width: 250px;
-  margin: 0 auto;
-}
-
-.product h4,
-.contact-card .name {
+.product h4 {
   word-wrap: break-word;
-}
-
-.image-placeholder,
-.contact-img {
-  background: #ccc;
-  height: 150px;
-  margin-bottom: 1rem;
-  border-radius: 8px;
 }
 
 /* ==== FEEDBACK ==== */
@@ -200,7 +217,7 @@ ul {
 }
 
 .feedback {
-  background: #f2dc99;
+  background: var(--soft-bg);
   padding: 1rem;
   border-radius: 10px;
   margin: 0.5rem 0;
@@ -218,8 +235,11 @@ ul {
 
 .faq-section .faq-item {
   border: 1px solid #ccc;
-  padding: 1rem;
-  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  background-color: var(--soft-bg);
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 /* ==== REGISTER / LOGIN ==== */
@@ -311,34 +331,22 @@ ul {
 
 /* ==== FOOTER ==== */
 .footer {
-  margin: 0;
+  margin-top: auto;
   padding: 1rem;
-  background: #fdd600;
+  background: linear-gradient(to right, #fffebd, #fdd600);
   text-align: center;
   position: relative;
   bottom: 0;
 }
 
-/* App toàn cục */
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* Layout chính */
-.layout {
+/* ==== CONTACT ==== */
+.contact-grid {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
 
-/* Nội dung chính mở rộng chiều cao */
-.main-content {
-  flex: 1;
-}
-
-/* ==== CONTACT PAGE ==== */
 .contact-card {
   width: 100%;
   max-width: 260px;
@@ -379,31 +387,6 @@ html, body, #root {
   margin-bottom: 0.5rem;
 }
 
-.contact-section {
-  background-color: #fffbe5;
-  padding: 2rem 1rem;
-}
-
-.contact-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.contact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
 .bottom-row {
   display: flex;
   justify-content: space-between;
@@ -433,15 +416,7 @@ html, body, #root {
   transform: scale(1.2);
 }
 
-.faq-section .faq-item {
-  border: 1px solid #ccc;
-  padding: 1.2rem 1.5rem;
-  border-radius: 10px;
-  background-color: #fffef7;
-  margin-bottom: 1.2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
+/* ==== RESPONSIVE ==== */
 @media (max-width: 768px) {
   .detail-section {
     flex-direction: column;

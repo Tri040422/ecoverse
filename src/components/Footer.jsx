@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => (
   <footer className="footer">
-    <p>&copy; 2025 Ecoverse. All rights reserved.</p>
+    <p>&copy; 2025 QeCo. Mọi quyền được bảo lưu.</p>
   </footer>
 );
 

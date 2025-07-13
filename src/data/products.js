@@ -1,26 +1,26 @@
 const products = [
   {
     id: 1,
-    name: "Coaster",
+    name: "Lót ly",
     desc: "Lót ly terrazzo thủ công",
     price: "$25",
-    category: "Coaster",
+    category: "Lót ly",
     image: "/images/coaster.jpg",
   },
   {
     id: 2,
-    name: "Candle jar",
+    name: "Hũ nến",
     desc: "Hũ nến thơm trang trí",
     price: "$35",
-    category: "Candle jar",
+    category: "Hũ nến",
     image: "/images/candle-jar.jpg",
   },
   {
     id: 3,
-    name: "Vase",
+    name: "Lọ hoa",
     desc: "Lọ cây hoặc hoa decor",
     price: "$40",
-    category: "Vase",
+    category: "Lọ hoa",
     image: "/images/vase.jpg",
   },
 ];
