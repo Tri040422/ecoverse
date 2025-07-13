@@ -47,7 +47,12 @@ const Home = () => {
       <section className="welcome">
         <h1>
           Chào mừng bạn đến với <br />
-          <span className="highlight">QeCo</span>
+          <div className="highlight">
+            <span className="qc">Q</span>
+            <span className="eo">e</span>
+            <span className="qc">C</span>
+            <span className="eo">o</span>
+          </div>
         </h1>
       </section>
 
