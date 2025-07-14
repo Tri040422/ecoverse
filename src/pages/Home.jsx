@@ -111,8 +111,11 @@ const Home = () => {
       <section className="faq">
         <h2>CÂU HỎI THƯỜNG GẶP</h2>
         <ul>
-          <li>Chính sách đổi trả thế nào?</li>
-          <li>Giao hàng trong bao lâu?</li>
+          <li>Ecolite là gì?</li>
+          <li>Làm sao để liên lạc với QeCo?</li>
+          <li>Phí vận chuyển là bao nhiêu?</li>
+          <li>Cách đổi trả hàng khi sản phẩm lỗi hoặc không vừa ý?</li>
+          <li>QeCo có nhận custom sản phẩm không?</li>
         </ul>
       </section>
     </>
