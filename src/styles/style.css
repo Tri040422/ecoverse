@@ -71,9 +71,11 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to right, var(--light-blue), var(--soft-bg));
+  background: #ffffff; 
   padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
 }
+
 
 .logo-container {
   display: flex;
